@@ -12,7 +12,7 @@ def csv_to_tokens(filename:str)->list:
 def tokens_to_dict(csv_tokens:list)->dict:
     csv_tokens = csv_tokens[:]
     column_names = csv_tokens.pop(0)
-    transposed_array = [[] for i in range(len(column_names))]
+    transposed_array = [[] for _ in range(len(column_names))]
     for row in csv_tokens:
         for idx, item in enumerate(row):
             transposed_array[idx].append(item)
